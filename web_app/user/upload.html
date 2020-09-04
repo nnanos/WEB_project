@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <link rel="stylesheet" type="text/css" href="css_test.css">
+    <script src="upload.js" defer></script>
+
+
+  </head>
+
+
+  <body>
+    
+    <nav class="navbar navbar-toggleable-sm bg-info navbar-inverse">
+        <div class="container"> 
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="./dash.html">Scoreboard</a>
+                    <a class="nav-item nav-link" href="./charts.html">Analyze</a>
+                    <a class="nav-item nav-link active" href="#">Upload</a>
+                </div>
+            <ul class="navbar-nav ml-auto pr-5">
+                <a href="../../backend/logout.php"><span style="color: red;">LOG OUT</span></a>
+            </ul>
+        </div>
+    </nav>
+        </div>
+    </nav>
+
+    <div id="map"> </div>
+
+		<div id="upload-file" class="upload" style="display:block">
+		    <form>
+			    <div>
+				    <label>Select file to upload</label>
+				    <input id="file-input" type="file" name="files">
+			    </div>
+		    </form>	
+		
+		    <div class="upload upload-button-cont">
+			    <button id="upload-button" disabled class="btn btn-primary" type="sumbit" onclick="submit()"> Upload Data</button>
+            </div>
+        </div>
+        <div  id="loading-gif" style="display:none; margin:auto;"><iframe src="https://gifer.com/embed/YCZH" width="50%" height="50%" style="margin:auto;top:0;left:0;" frameBorder="0" allowFullScreen></iframe></div>
+
+
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="scoreboard.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="css_test.css">
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-toggleable-sm bg-info navbar-inverse">
+        <div class="container"> 
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Scoreboard</a>
+                    <a class="nav-item nav-link" href="./charts.html">Analyze</a>
+                    <a class="nav-item nav-link" href="./upload.html">Upload</a>
+                </div>
+
+            </div>
+            <ul class="navbar-nav ml-auto pr-5">
+                <a href="../../backend/logout.php"><span style="color: red;">LOG OUT</span></a>
+            </ul>
+            
+        </div>
+    </nav>
+        
+    
+
+    <div id="info-container" class="container">
+        <div class="row">
+            <div class="col-sm-12" >
+                <span id="score">54</span>
+            </div>		
+            <div class=" col-sm-12" id="span-period">
+                <span>Period:   </span>
+                <span id="first-dt"></span><span> -> </span><span id="last-dt"></span>	
+            </div>
+            </div>
+            <div class="col-sm-12" id="lst-up">
+                <span>Last Upload:  </span>
+                    <span id="last-up">XX-XX-XXX</span>	
+            </div>
+        </div>		
+    </div>
+
+<div id="scoreboard">
+    <canvas id="score-chart" height="50ex"></canvas>
+    
+</div>
+
+
+  </body>
+</html>
